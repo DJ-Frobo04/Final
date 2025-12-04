@@ -1,23 +1,47 @@
 body {
-  font-family:Arial, Helvetica, sans-serif;
-  background-color:lightpink
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightpink;
 }
 
 .wrapper {
-  background-color: white;
-  max-width: 960px;
   margin: 0 auto;
-  border: 2px solid gray;
-  box-shadow: 2px 2px 20px black;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 header {
-  background-color:plum;
+  grid-column: span 2;
+  text-align: center;
+  background-color: plum;
   padding: 3rem;
+  font-size: 290%;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 1rem;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  background-color: white;
+  padding: 2em 2rem;
+  border-radius: 2rem;
+  /* display: grid; */
+  /* grid-template-columns: 0.5fr 1fr; */
+  /* gap: 1rem; */
+}
+
+footer {
+  clear: both;
+  grid-column: span 2;
+  background-color: rgb(238, 205, 238);
+  padding: 2em;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
 }
 
 img {
@@ -25,42 +49,44 @@ img {
 }
 
 nav {
-  background-color: thistle;
-  display: grid;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  font-size: 100%;
+  text-transform: uppercase;
+  background-color: #b04688;
+  border: 2px solid #b04688;
+  border-radius: 2em;
   padding: 1rem;
-  border-radius: 30px;
-  box-shadow: inset 2px 2px 10px black;
-  text-wrap: balance;
+  text-align: center;
 }
 
 nav ul {
-  display: grid;
-  align-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  padding: 1rem;
-  gap: 1rem;
 }
 
-nav a:hover {
-  background-color: white;
-  border-radius: 1rem;
-  padding: .5rem;
+nav li {
+  list-style-type: none;
+  padding-bottom: 2em;
+  padding-top: 2rem;
 }
 
 nav a {
+  display: block;
+  text-align: center;
+  color: white;
+  padding: 1em 0;
   text-decoration: none;
-  color: purple;
+  border-bottom: 3px solid silver;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 1rem;
-  padding: .5rem;
+nav a:hover {
+  background-color: black;
+  border-radius: 2rem;
+}
+
+.proof_of_concept {
+  float: right;
+  border: 5px solid white;
+  box-shadow: 2px 2px 7px black;
+  margin: 0 0 1rem 1rem;
 }
 
 .right-column {
@@ -84,8 +110,28 @@ main {
   margin-top: .5rem;
 }
 
-footer {
-  background-color: rgb(238, 205, 238);
-  padding: 1em;
-  display: flex;
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: .5rem;
+  padding: .5rem;
+}
+
+.column {
+  text-align: center;
+}
+
+.column a {
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: block;
+  padding: 0.5em 0;
+}
+
+.column a:hover {
+  background-color: black;
+  border-radius: 0.5rem;
+  color: white;
 }
